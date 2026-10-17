@@ -1,3 +1,5 @@
+<img src="public/favicon.png" width="300" alt="Logo">
+
 # Mobility — Landing page
 
 Site de divulgação do **Mobility**, o app de ônibus, metrô, trem e VLT em tempo real para São Paulo e Rio de Janeiro.
