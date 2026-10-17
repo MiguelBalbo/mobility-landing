@@ -32,11 +32,13 @@ export function Privacidade() {
               <div>
                 <p className="label-mono text-[#4B594F]">Privacidade</p>
                 <h2 className="mt-5 text-display-sm font-light [font-stretch:108%]">
-                  Sua localização <em className="text-forest">não sai</em> do seu celular.
+                  O seu GPS <em className="text-forest">fica</em> no seu celular.
                 </h2>
                 <p className="mt-6 max-w-[500px] text-[18px] font-light leading-relaxed text-[#34413A]">
-                  O GPS é usado no próprio aparelho para achar o ponto mais perto e acompanhar a chegada. Sem conta, sem
-                  perfil. Anúncios personalizados só se você quiser — e dá para mudar em Ajustes a qualquer momento.
+                  O GPS é usado no próprio aparelho para achar o ponto mais perto e acompanhar a chegada. Só o mapa de
+                  pontos e o acompanhamento pelo servidor enviam uma área ou um ponto, nunca as coordenadas. Sem conta,
+                  sem perfil. Estatísticas de uso e anúncios personalizados só se você permitir, e dá para mudar em
+                  Ajustes a qualquer momento.
                 </p>
                 <Link
                   to="/privacidade"

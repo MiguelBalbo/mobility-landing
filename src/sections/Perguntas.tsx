@@ -6,7 +6,7 @@ import { Revelar } from '@/components/Revelar';
 const PERGUNTAS: { p: string; r: React.ReactNode }[] = [
   {
     p: 'O Mobility é grátis?',
-    r: 'Sim. O app se mantém com anúncios do Google AdMob. Você escolhe se eles podem ser personalizados e pode mudar isso em Ajustes › Privacidade.',
+    r: 'Sim. O app se mantém com anúncios do Google AdMob. Eles são genéricos, a menos que você permita a personalização (só para maiores de 18 anos), e você pode mudar isso em Ajustes › Privacidade.',
   },
   {
     p: 'Preciso criar uma conta?',
@@ -28,8 +28,9 @@ const PERGUNTAS: { p: string; r: React.ReactNode }[] = [
     p: 'O acompanhamento gasta muita bateria?',
     r: (
       <>
-        Ele usa a localização em segundo plano só enquanto estiver ativo e termina quando o ônibus chega ou quando você o
-        encerra. Pode aumentar um pouco o consumo de bateria e dados. Mais detalhes nos{' '}
+        Quando é atualizado pelo aparelho, ele usa a localização em segundo plano só enquanto estiver ativo; quando é
+        atualizado pelo servidor, dispensa a localização em segundo plano. Nos dois casos, termina quando o ônibus chega
+        ou quando você o encerra, e pode aumentar um pouco o consumo de bateria e dados. Mais detalhes nos{' '}
         <Link to="/termos" className="text-signal underline-offset-4 hover:underline">Termos de uso</Link>.
       </>
     ),
