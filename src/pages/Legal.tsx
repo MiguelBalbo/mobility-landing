@@ -3,9 +3,9 @@ import { Children, isValidElement, useEffect, useMemo, useState, type ReactNode 
 import Markdown, { type Components } from 'react-markdown';
 import { Link } from 'react-router';
 import remarkGfm from 'remark-gfm';
-// Mesma fonte das telas de termos do app: editar legal/*.md atualiza o app e o site.
-import privacidadeMd from '../../../legal/politica-de-privacidade.md?raw';
-import termosMd from '../../../legal/termos-de-uso.md?raw';
+// Cópia de legal/*.md do app (mesma fonte das telas de termos); atualize com `npm run sync:legal`.
+import privacidadeMd from '@/conteudo/legal/politica-de-privacidade.md?raw';
+import termosMd from '@/conteudo/legal/termos-de-uso.md?raw';
 
 type Documento = { titulo: string; atualizacao: string | null; corpo: string; secoes: { id: string; titulo: string }[] };
 

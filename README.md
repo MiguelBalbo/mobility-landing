@@ -5,8 +5,10 @@
 Site de divulgação do **Mobility**, o app de ônibus, metrô, trem e VLT em tempo real para São Paulo e Rio de Janeiro.
 Tem a página inicial e as páginas de **Termos de uso** e **Política de privacidade**.
 
-É um projeto separado do app Expo: tem `package.json` e `node_modules` próprios. O Metro, o ESLint e o `tsc` da raiz
-ignoram esta pasta (ver `metro.config.js`, `eslint.config.js` e `tsconfig.json` na raiz).
+Publicado no GitHub Pages: **https://miguelbalbo.github.io/mobility-landing/**
+
+É um repositório separado do app Expo (fica dentro da pasta do app, que o ignora no `.gitignore`), com `package.json`
+e `node_modules` próprios. O Metro, o ESLint e o `tsc` do app também ignoram esta pasta.
 
 ## Stack
 
@@ -27,7 +29,8 @@ npm install        # instala as dependências
 npm run dev        # servidor de desenvolvimento em http://localhost:5173
 npm run typecheck  # checagem de tipos
 npm run build      # typecheck + build de produção em dist/
-npm run preview    # serve o dist/ localmente
+npm run preview    # serve o dist/ localmente em http://localhost:4173/mobility-landing/
+npm run sync:legal # copia ../legal/*.md do app para src/conteudo/legal/
 ```
 
 ## Estrutura
@@ -35,6 +38,11 @@ npm run preview    # serve o dist/ localmente
 ```
 Landing/
 ├── index.html              # meta tags, fontes (Archivo e Spline Sans Mono) e favicon
+├── vite.config.ts          # caminho base do Pages e geração das páginas de cada rota no build
+├── scripts/
+│   └── sincronizar-legal.mjs  # npm run sync:legal
+├── .github/workflows/
+│   └── deploy.yml          # build e publicação no GitHub Pages
 ├── public/                 # favicon
 └── src/
     ├── main.tsx            # entrada (BrowserRouter)
@@ -42,11 +50,12 @@ Landing/
     ├── index.css           # tokens de design (@theme) e classes base
     ├── pages/
     │   ├── Home.tsx        # monta as seções da landing
-    │   ├── Legal.tsx       # Termos e Privacidade (lidos de ../legal/*.md)
+    │   ├── Legal.tsx       # Termos e Privacidade (renderiza src/conteudo/legal/*.md)
     │   └── NotFound.tsx    # 404
     ├── sections/           # Hero, FaixaStatus, Produto, Recursos, Trilhos, Privacidade, Perguntas, ChamadaFinal
     ├── components/         # Nav, Footer, Celular (mockup do app), BotoesLoja, Avisos, Icone3D, Inclinavel, Revelar…
     ├── three/              # cena 3D do hero e o contorno do ícone extrudado
+    ├── conteudo/legal/     # cópia dos textos legais do app
     └── lib/
         ├── dados.ts        # links das lojas e linhas de trilhos (cores iguais às do app)
         └── avisoLoja.ts    # aviso de "ainda não disponível" nos botões das lojas
@@ -68,22 +77,35 @@ adaptada à identidade do app:
 
 ## Conteúdo
 
-- **Textos legais:** `src/pages/Legal.tsx` importa `../legal/termos-de-uso.md` e `../legal/politica-de-privacidade.md`,
-  a mesma fonte das telas de termos do app. Edite os `.md` e as duas coisas se atualizam. O título (`# …`) e a linha
-  "Última atualização" viram o cabeçalho da página; cada `## …` entra no índice lateral.
+- **Textos legais:** a fonte é `legal/*.md` do app (a mesma das telas de termos). Como este repositório é separado,
+  uma cópia fica versionada em `src/conteudo/legal/`: depois de editar os termos no app, rode `npm run sync:legal` e
+  faça commit aqui. O título (`# …`) e a linha "Última atualização" viram o cabeçalho da página; cada `## …` entra no
+  índice lateral.
 - **Links das lojas:** em `LINKS_LOJA` (`src/lib/dados.ts`). Enquanto o link não começa com `http`, o clique em
-  "App Store" ou "Google Play" mostra um aviso na própria página de que o app ainda não está disponível. Com os links reais, os botões passam a abrir as
-  lojas sem mudar mais nada.
+  "App Store" ou "Google Play" mostra um aviso na
+  própria página de que o app ainda não está disponível. Com os links reais, os botões passam a abrir as lojas sem
+  mudar mais nada.
 - **Status dos trilhos:** a seção "Trilhos" é uma prévia ilustrativa com dados fixos em `src/lib/dados.ts`.
 
-## Deploy
+## Deploy (GitHub Pages)
 
-O build gera um site estático em `dist/`. Como as rotas (`/termos`, `/privacidade`) usam o histórico do navegador,
-configure o host para responder `index.html` em qualquer caminho (rewrite de SPA):
+Cada push na `main` dispara `.github/workflows/deploy.yml`, que instala as dependências, faz o build e publica o
+`dist/` no Pages. Também dá para rodar manualmente em **Actions › Deploy no GitHub Pages › Run workflow**.
 
-- **Vercel:** `vercel.json` com `{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }`
-- **Netlify:** arquivo `public/_redirects` com `/*  /index.html  200`
-- **Firebase Hosting:** `"rewrites": [{ "source": "**", "destination": "/index.html" }]` no `firebase.json`
+Configuração única no GitHub: **Settings › Pages › Build and deployment › Source = GitHub Actions**.
 
-Os textos legais precisam ficar acessíveis por URL pública para as lojas; aponte os links de Termos e Privacidade
-das fichas do app para `https://<seu-domínio>/termos` e `https://<seu-domínio>/privacidade`.
+Como o Pages não tem rewrite de SPA, o build (plugin `githubPages` em `vite.config.ts`):
+
+- usa o caminho base `/mobility-landing/` (o React Router recebe o mesmo `basename`);
+- copia o `index.html` para `termos/index.html` e `privacidade/index.html`, então essas URLs abrem direto com
+  status 200 — ao criar uma rota nova, adicione-a em `ROTAS`;
+- copia o `index.html` para `404.html`, que mostra a página de 404 do app em qualquer outro caminho;
+- cria o `.nojekyll`.
+
+**Domínio próprio:** configure em Settings › Pages › Custom domain. O workflow já lê o caminho base do Pages
+(fica vazio com domínio próprio); para builds locais, use `BASE_PATH=/ npm run build`.
+
+Links para as fichas das lojas:
+
+- Termos: `https://miguelbalbo.github.io/mobility-landing/termos`
+- Privacidade: `https://miguelbalbo.github.io/mobility-landing/privacidade`

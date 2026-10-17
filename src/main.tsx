@@ -6,7 +6,8 @@ import '@/index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    {/* No GitHub Pages o site fica em /mobility-landing/; o basename vem do `base` do Vite. */}
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <App />
     </BrowserRouter>
   </StrictMode>,
