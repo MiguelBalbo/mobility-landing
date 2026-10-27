@@ -14,9 +14,9 @@ Esta Política de Privacidade explica, de forma direta, quais informações o ap
 
 ## 1. Quem é o responsável
 
-O controlador dos dados tratados pelo Mobility é **Miguel Balbo Victor**, pessoa física, que pode ser contatado pelo e-mail **miguel.balbo@yahoo.com.br**.
+O controlador dos dados tratados pelo Mobility é **Miguel Balbo Victor**, pessoa física, que pode ser contatado pelo e-mail **destny.miguel@gmail.com**.
 
-O encarregado pelo tratamento de dados pessoais (art. 41 da LGPD) é **Miguel Balbo Victor**, pelo mesmo e-mail: **miguel.balbo@yahoo.com.br**.
+O encarregado pelo tratamento de dados pessoais (art. 41 da LGPD) é **Miguel Balbo Victor**, pelo mesmo e-mail: **destny.miguel@gmail.com**.
 
 ## 2. Quais informações tratamos
 
@@ -66,7 +66,7 @@ Para responder mais rápido, o servidor guarda em memória, por até 12 horas, a
 Quando você ativa o acompanhamento de uma linha, o Mobility mostra a previsão de chegada na Live Activity (iOS) ou numa notificação (Android) e avisa quando o ônibus estiver chegando. Isso pode funcionar de dois modos:
 
 - **Atualizado pelo aparelho:** o próprio aplicativo consulta a previsão e atualiza a notificação. Para continuar funcionando com a tela apagada, ele usa a localização em segundo plano apenas enquanto o acompanhamento estiver ativo, e essa localização não é enviada a ninguém (seção 2.2).
-- **Atualizado pelo servidor (quando disponível):** o nosso servidor calcula a previsão e envia as atualizações ao seu aparelho por notificações push.
+- **Atualizado pelo servidor (em uma versão futura):** o nosso servidor calcula a previsão e envia as atualizações ao seu aparelho por notificações push. **Na versão atual do aplicativo esse modo ainda não está disponível** e o acompanhamento funciona só no modo atualizado pelo aparelho; quando ele for ativado, você será avisado no próprio aplicativo.
 
 No modo atualizado pelo servidor, o aplicativo envia ao servidor apenas:
 
@@ -75,7 +75,7 @@ No modo atualizado pelo servidor, o aplicativo envia ao servidor apenas:
 
 Nesse modo, a sua localização do GPS **não** é enviada e o aplicativo não precisa usar a localização em segundo plano. O servidor usa esses dados **somente** para calcular a previsão e enviar as atualizações daquele acompanhamento. Eles não são usados para publicidade, estatísticas ou qualquer outra finalidade, não são associados ao seu IP e são **apagados** quando o ônibus chega, quando você encerra o acompanhamento ou, no máximo, **2 horas** depois do início, o que ocorrer primeiro.
 
-As notificações push são entregues pela Apple (no iOS) ou pelo Google (no Android), que recebem o código de envio e o conteúdo da notificação (a linha, o ponto e a previsão). **Não usamos notificações para publicidade.** Você pode desligar as notificações do Mobility a qualquer momento nos ajustes do sistema; sem elas, o acompanhamento não funciona.
+As notificações push são entregues pela Apple (no iOS) ou pelo Google (no Android), que recebem o código de envio e o conteúdo da notificação (a linha, o ponto e a previsão). **Não usamos notificações para publicidade.** Você pode desligar as notificações do Mobility a qualquer momento nos ajustes do sistema. Sem elas, no iOS a Live Activity continua funcionando, mas você não recebe o aviso de chegada; no Android, o acompanhamento não funciona.
 
 ### 2.5 Configuração remota (Firebase)
 
@@ -194,7 +194,7 @@ Como o Mobility não tem cadastro e o servidor não guarda quem fez cada consult
 - **Dados no aparelho:** remova pelo aplicativo ou apague os dados do aplicativo / desinstale-o.
 - **Dados tratados pelo Google para anúncios:** consulte e gerencie em https://myadcenter.google.com.
 
-Para os demais pedidos, escreva para **miguel.balbo@yahoo.com.br**. Responderemos em até 15 dias (art. 19, II, da LGPD).
+Para os demais pedidos, escreva para **destny.miguel@gmail.com**. Responderemos em até 15 dias (art. 19, II, da LGPD).
 
 ## 8. Retenção
 
@@ -230,7 +230,7 @@ Podemos atualizar esta Política para refletir mudanças no aplicativo ou na lei
 
 ## 13. Contato
 
-Dúvidas sobre esta Política ou sobre os seus dados: **miguel.balbo@yahoo.com.br** (encarregado: Miguel Balbo Victor).
+Dúvidas sobre esta Política ou sobre os seus dados: **destny.miguel@gmail.com** (encarregado: Miguel Balbo Victor).
 
 Histórico de versões:
 

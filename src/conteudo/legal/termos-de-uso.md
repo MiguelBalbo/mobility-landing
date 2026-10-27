@@ -95,4 +95,4 @@ Estes termos são regidos pelas leis brasileiras. Fica eleito o foro do domicíl
 
 ## 13. Contato
 
-Dúvidas sobre estes termos: **miguel.balbo@yahoo.com.br**.
+Dúvidas sobre estes termos: **destny.miguel@gmail.com**.
