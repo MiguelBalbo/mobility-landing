@@ -8,7 +8,7 @@ Esta Política de Privacidade explica, de forma direta, quais informações o ap
 
 - **Sem cadastro:** não pedimos nome, e-mail, telefone ou documento.
 - **Seus dados ficam no aparelho:** favoritos, recentes, histórico de buscas, widgets e preferências são guardados só no seu celular.
-- **O GPS é processado no aparelho.** A sua localização aproximada só pode ser deduzida pelo nosso servidor em dois casos, ambos acionados por você: no **mapa de pontos** e no **acompanhamento de um ônibus atualizado pelo servidor** (seção 2.2).
+- **O GPS é processado no aparelho.** A sua localização aproximada só pode ser deduzida pelo nosso servidor em dois casos, ambos acionados por você: no **mapa de pontos** e no **acompanhamento de um ônibus** (seção 2.2).
 - **Estatísticas de uso e anúncios personalizados só com a sua permissão**, e você pode mudar de ideia a qualquer momento em Ajustes.
 - **Não vendemos dados** e não criamos perfis seus. Seus direitos estão na seção 7 e o contato do encarregado, na seção 1.
 
@@ -41,7 +41,7 @@ Com a sua permissão, o Mobility acessa a localização do aparelho para mostrar
 **As coordenadas do GPS são processadas no seu aparelho.** Elas não são enviadas aos nossos servidores, ao Google, aos anunciantes ou às estatísticas de uso, e não são armazenadas por nós. Há apenas **duas situações**, ambas iniciadas por você, em que o nosso servidor recebe uma informação que indica, de forma aproximada, onde você está:
 
 - **Mapa de pontos.** Ao abrir o mapa de pontos, ele fica centrado na sua posição. Para listar os pontos de ônibus da área, o aplicativo envia ao servidor os **limites da região visível na tela** (latitude e longitude mínimas e máximas, no máximo cerca de 11 km de lado). Esses limites são usados apenas para responder à consulta: não são gravados, não entram em registros do servidor e não são repassados a terceiros.
-- **Acompanhamento atualizado pelo servidor.** Quando esse modo estiver disponível no seu aparelho, o servidor recebe o **código do ponto** que você escolheu acompanhar, normalmente o mais próximo de você, junto com um código para enviar notificações ao seu aparelho. Os detalhes estão na seção 2.4.
+- **Acompanhamento do ônibus.** Ao iniciar um acompanhamento, o servidor recebe o **código do ponto** que estava selecionado, normalmente o mais próximo de você, junto com um código para enviar notificações ao seu aparelho. A sua posição não é usada depois disso. Os detalhes estão na seção 2.4.
 
 O mesmo vale, em menor grau, para as consultas de previsão: o código do ponto consultado pode indicar onde você está ou para onde vai (seção 2.3).
 
@@ -63,17 +63,14 @@ Para responder mais rápido, o servidor guarda em memória, por até 12 horas, a
 
 ### 2.4 Notificações e acompanhamento do ônibus
 
-Quando você ativa o acompanhamento de uma linha, o Mobility mostra a previsão de chegada na Live Activity (iOS) ou numa notificação (Android) e avisa quando o ônibus estiver chegando. Isso pode funcionar de dois modos:
+Quando você ativa o acompanhamento de uma linha, o Mobility mostra a previsão de chegada na Live Activity (iOS) ou numa notificação (Android) e avisa quando o ônibus estiver chegando. O acompanhamento usa o ponto que estava selecionado no momento em que você o iniciou: o nosso servidor calcula a previsão desse ponto a cada minuto e envia as atualizações ao seu aparelho por notificações push.
 
-- **Atualizado pelo aparelho:** o próprio aplicativo consulta a previsão e atualiza a notificação. Para continuar funcionando com a tela apagada, ele usa a localização em segundo plano apenas enquanto o acompanhamento estiver ativo, e essa localização não é enviada a ninguém (seção 2.2).
-- **Atualizado pelo servidor (em uma versão futura):** o nosso servidor calcula a previsão e envia as atualizações ao seu aparelho por notificações push. **Na versão atual do aplicativo esse modo ainda não está disponível** e o acompanhamento funciona só no modo atualizado pelo aparelho; quando ele for ativado, você será avisado no próprio aplicativo.
-
-No modo atualizado pelo servidor, o aplicativo envia ao servidor apenas:
+Para isso, o aplicativo envia ao servidor apenas:
 
 - um **código de envio de notificações** gerado pela Apple (Apple Push Notification service, inclusive o código da Live Activity) ou pelo Google (Firebase Cloud Messaging), que serve só para entregar a notificação neste aparelho;
-- a cidade, o código da linha, o sentido e o **código do ponto** escolhido.
+- a cidade, o código da linha, o **código do ponto** escolhido e os textos exibidos no acompanhamento (o letreiro, o destino e o nome do ponto).
 
-Nesse modo, a sua localização do GPS **não** é enviada e o aplicativo não precisa usar a localização em segundo plano. O servidor usa esses dados **somente** para calcular a previsão e enviar as atualizações daquele acompanhamento. Eles não são usados para publicidade, estatísticas ou qualquer outra finalidade, não são associados ao seu IP e são **apagados** quando o ônibus chega, quando você encerra o acompanhamento ou, no máximo, **2 horas** depois do início, o que ocorrer primeiro.
+A sua localização do GPS **não** é enviada, e o aplicativo **não usa a localização em segundo plano**. O servidor usa esses dados **somente** para calcular a previsão e enviar as atualizações daquele acompanhamento. Eles não são usados para publicidade, estatísticas ou qualquer outra finalidade, não são associados ao seu IP e são **apagados** quando o ônibus chega, quando você encerra o acompanhamento ou, no máximo, **2 horas** depois do início, o que ocorrer primeiro.
 
 As notificações push são entregues pela Apple (no iOS) ou pelo Google (no Android), que recebem o código de envio e o conteúdo da notificação (a linha, o ponto e a previsão). **Não usamos notificações para publicidade.** Você pode desligar as notificações do Mobility a qualquer momento nos ajustes do sistema. Sem elas, no iOS a Live Activity continua funcionando, mas você não recebe o aviso de chegada; no Android, o acompanhamento não funciona.
 
@@ -234,5 +231,5 @@ Dúvidas sobre esta Política ou sobre os seus dados: **destny.miguel@gmail.com*
 
 Histórico de versões:
 
-- Versão 2 (17 de outubro de 2026): estatísticas de uso só com consentimento; regra de idade para anúncios personalizados; acompanhamento atualizado pelo servidor por notificações push; verificação de segurança (App Check); correção da retenção no servidor; papel de cada empresa; transferência internacional; usuários fora do Brasil.
+- Versão 2 (17 de outubro de 2026): estatísticas de uso só com consentimento; regra de idade para anúncios personalizados; acompanhamento atualizado pelo servidor por notificações push, sem localização em segundo plano; verificação de segurança (App Check); correção da retenção no servidor; papel de cada empresa; transferência internacional; usuários fora do Brasil.
 - Versão 1 (17 de outubro de 2026): estatísticas de uso (Google Analytics for Firebase) e detalhamento do mapa de pontos.

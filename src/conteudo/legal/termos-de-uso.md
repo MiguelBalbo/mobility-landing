@@ -11,7 +11,7 @@ O Mobility é um aplicativo gratuito de consulta ao transporte público das cida
 - buscar linhas de ônibus e ver o trajeto e os pontos no mapa;
 - ver a posição dos ônibus e a previsão de chegada em cada ponto;
 - salvar linhas e pontos favoritos e exibi-los em widgets;
-- acompanhar a chegada de um ônibus com a tela apagada (Live Activity no iOS e notificação no Android), com atualizações feitas pelo próprio aparelho ou enviadas pelo nosso servidor;
+- acompanhar a chegada de um ônibus com a tela apagada (Live Activity no iOS e notificação no Android), com atualizações enviadas pelo nosso servidor para o ponto escolhido;
 - consultar o status das linhas de metrô, trem e VLT e o mapa da rede.
 
 O uso não exige cadastro. Favoritos, recentes, histórico de buscas e preferências ficam guardados apenas no seu aparelho.
@@ -49,7 +49,7 @@ O Mobility pode ser usado por adolescentes. Menores de 18 anos devem usá-lo com
 
 ## 6. Permissões do aparelho
 
-Alguns recursos dependem de permissões, como localização (inclusive em segundo plano, durante o acompanhamento atualizado pelo aparelho) e notificações. Você pode concedê-las ou revogá-las nos ajustes do sistema. Sem elas, parte dos recursos não funcionará. O acompanhamento pode aumentar o consumo de bateria e de dados móveis.
+Alguns recursos dependem de permissões, como localização (só com o aplicativo em uso) e notificações. Você pode concedê-las ou revogá-las nos ajustes do sistema. Sem elas, parte dos recursos não funcionará. O acompanhamento pode aumentar o consumo de bateria e de dados móveis.
 
 Dois recursos enviam ao nosso servidor informações que indicam, de forma aproximada, onde você está: o **mapa de pontos**, que envia os limites da área visível na tela, e o **acompanhamento atualizado pelo servidor**, que envia o código do ponto escolhido e um código para entregar as notificações. As coordenadas do GPS não são enviadas em nenhum dos dois casos.
 
