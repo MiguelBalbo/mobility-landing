@@ -95,7 +95,7 @@ Nesse processo, o Google e a Apple recebem informações técnicas sobre a integ
 
 ### 2.7 Estatísticas de uso (Google Analytics for Firebase): só com a sua permissão
 
-Para entender como o aplicativo é usado e onde melhorá-lo, o Mobility pode usar o **Google Analytics for Firebase** (Google LLC), **somente se você permitir**. As estatísticas ficam **desligadas por padrão**: você escolhe na abertura do aplicativo e pode mudar de ideia a qualquer momento em **Ajustes › Privacidade › Estatísticas de uso**.
+Para entender como o aplicativo é usado e onde melhorá-lo, o Mobility pode usar o **Google Analytics for Firebase** (Google LLC), **somente se você permitir**. As estatísticas ficam **desligadas por padrão** e só são ligadas por você, em **Ajustes › Privacidade › Estatísticas de uso**, onde também podem ser desligadas a qualquer momento. No Android, a escolha também é oferecida na primeira abertura do aplicativo; no iPhone, só em Ajustes.
 
 Com a sua permissão, são registrados:
 
@@ -117,9 +117,9 @@ O Mobility é gratuito e exibe anúncios do **Google AdMob** (Google LLC), em fa
 - informações técnicas do aparelho e do aplicativo, como modelo, sistema operacional, idioma e versão do aplicativo;
 - interações com os anúncios, como exibições e toques.
 
-**Você escolhe se os anúncios podem ser personalizados** na primeira abertura do aplicativo e pode mudar essa escolha a qualquer momento em **Ajustes › Privacidade › Anúncios personalizados**:
+**Você escolhe se os anúncios podem ser personalizados** na primeira abertura do aplicativo e pode mudar essa escolha a qualquer momento: no Android, em **Ajustes › Privacidade › Anúncios personalizados**; no iPhone, a escolha é o pedido de rastreamento do sistema ("Permitir que o app rastreie") e pode ser mudada nos Ajustes do iPhone (Privacidade e Segurança › Rastreamento), atalho disponível em **Ajustes › Privacidade › Rastreamento para anúncios**:
 
-- **Anúncios personalizados:** o Google pode usar o identificador de publicidade para mostrar anúncios relacionados aos seus interesses, tratando os dados em servidores fora do Brasil, como nos Estados Unidos. **Essa opção é só para maiores de 18 anos:** antes de ativá-la, o aplicativo pergunta a sua idade (seção 10). No iOS, ela também depende de você permitir o rastreamento no pedido do sistema ("Permitir que o app rastreie").
+- **Anúncios personalizados:** o Google pode usar o identificador de publicidade para mostrar anúncios relacionados aos seus interesses, tratando os dados em servidores fora do Brasil, como nos Estados Unidos. **Essa opção é só para maiores de 18 anos:** o aplicativo confirma a sua idade antes de ativá-la (seção 10). No iPhone, isso acontece depois de você permitir o rastreamento no pedido do sistema, e só nesse caso: o aplicativo pede ao iOS a sua faixa etária (Declared Age Range), e o próprio iOS pergunta se você quer compartilhá-la. Recebemos só a indicação de ter ou não 18 anos ou mais, nunca a data de nascimento. Se você não compartilhar, ou o iOS não tiver essa informação, o aplicativo pergunta a sua idade.
 - **Anúncios genéricos (o padrão, sem a sua permissão):** o identificador de publicidade não é usado e os anúncios se baseiam apenas no contexto do momento, como o aplicativo e a região aproximada. Mesmo assim, o Google ainda trata o IP e os dados técnicos acima para entregar, medir e proteger os anúncios.
 
 O Mobility **não envia ao AdMob** a localização do GPS, as linhas e pontos que você consulta, os seus favoritos ou o seu histórico de buscas. Os anúncios são configurados para conteúdo adequado a todos os públicos. No Android, você também pode redefinir ou excluir o ID de publicidade nas configurações do sistema (Google › Anúncios).
@@ -184,8 +184,8 @@ Pelo art. 18 da LGPD, você pode, a qualquer momento:
 
 Como o Mobility não tem cadastro e o servidor não guarda quem fez cada consulta, normalmente não temos dados que permitam identificar você. Por isso, a maior parte dos seus direitos é exercida diretamente no aplicativo:
 
-- **Estatísticas de uso:** permita ou revogue em **Ajustes › Privacidade › Estatísticas de uso**.
-- **Anúncios personalizados:** ligue ou desligue em **Ajustes › Privacidade › Anúncios personalizados**. No iOS, você também pode negar o rastreamento em Ajustes › Privacidade e Segurança › Rastreamento. Quem está em regiões onde o Google exige um formulário próprio de consentimento (como a União Europeia) encontra em Ajustes o atalho "Opções de privacidade do Google".
+- **Estatísticas de uso:** ligue ou desligue em **Ajustes › Privacidade › Estatísticas de uso**.
+- **Anúncios personalizados:** no Android, ligue ou desligue em **Ajustes › Privacidade › Anúncios personalizados**. No iPhone, permita ou negue o rastreamento nos Ajustes do iPhone (Privacidade e Segurança › Rastreamento); o atalho fica em **Ajustes › Privacidade › Rastreamento para anúncios**. Quem está em regiões onde o Google exige um formulário próprio de consentimento (como a União Europeia) encontra em Ajustes o atalho "Opções de privacidade do Google".
 - **Acompanhamento:** encerre-o no aplicativo; os dados do modo atualizado pelo servidor são apagados em seguida.
 - **Localização e notificações:** revogue nos ajustes do sistema.
 - **Dados no aparelho:** remova pelo aplicativo ou apague os dados do aplicativo / desinstale-o.
@@ -211,7 +211,7 @@ A comunicação com o nosso servidor é criptografada (HTTPS) e só é aceita de
 
 O Mobility é um aplicativo de transporte público para o público em geral e pode ser usado por adolescentes. Não é direcionado a crianças (menores de 12 anos) e não coleta intencionalmente dados delas.
 
-- **Anúncios personalizados são só para maiores de 18 anos.** Antes de ativá-los, o aplicativo pergunta se você tem 18 anos ou mais. Se você responder que tem menos, os anúncios ficam genéricos e o Google é avisado de que os pedidos de anúncio devem ser tratados como de um menor de idade. Não fazemos perfilamento de crianças e adolescentes para publicidade (Lei nº 15.211/2025 – ECA Digital, e art. 14 da LGPD).
+- **Anúncios personalizados são só para maiores de 18 anos.** Antes de ativá-los, o aplicativo confirma se você tem 18 anos ou mais: no iPhone, pela faixa etária do iOS, se você a compartilhar; senão, e no Android, perguntando. Se você responder que tem menos, os anúncios ficam genéricos e o Google é avisado de que os pedidos de anúncio devem ser tratados como de um menor de idade. Não fazemos perfilamento de crianças e adolescentes para publicidade (Lei nº 15.211/2025 – ECA Digital, e art. 14 da LGPD).
 - Todos os anúncios são configurados para conteúdo adequado a todos os públicos.
 - O aplicativo não tem chat, perfis públicos, compras ou conteúdo gerado por usuários.
 

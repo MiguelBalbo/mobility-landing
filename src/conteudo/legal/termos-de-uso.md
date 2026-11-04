@@ -61,9 +61,9 @@ O tratamento dessas e de outras informações está descrito na **Política de P
 
 O Mobility é gratuito e exibe anúncios fornecidos pelo Google AdMob, em faixas (banners) e em tela cheia ao abrir as telas de linha, de ponto e de mapa. Os anúncios são de responsabilidade dos respectivos anunciantes; não endossamos os produtos ou serviços anunciados nem respondemos por ofertas feitas por terceiros.
 
-Os anúncios são genéricos, a menos que você permita a personalização. Você pode mudar essa escolha a qualquer momento em **Ajustes › Privacidade**. A opção de anúncios personalizados é só para maiores de 18 anos, e o aplicativo pergunta a sua idade antes de ativá-la.
+Os anúncios são genéricos, a menos que você permita a personalização (no iPhone, pelo pedido de rastreamento do sistema). Você pode mudar essa escolha a qualquer momento em **Ajustes › Privacidade** (no iPhone, nos Ajustes do sistema, com atalho no aplicativo). A opção de anúncios personalizados é só para maiores de 18 anos, e o aplicativo pergunta a sua idade antes de ativá-la.
 
-Se você permitir, o Mobility também registra estatísticas de uso, sem a sua localização, para entender como o aplicativo é usado e melhorá-lo. Elas ficam desligadas por padrão e podem ser ligadas ou desligadas em **Ajustes › Privacidade**.
+Se você ligar, o Mobility também registra estatísticas de uso, sem a sua localização, para entender como o aplicativo é usado e melhorá-lo. Elas ficam desligadas por padrão e podem ser ligadas ou desligadas em **Ajustes › Privacidade**.
 
 Os dados usados pelos anúncios e pelas estatísticas estão descritos na **Política de Privacidade**.
 
