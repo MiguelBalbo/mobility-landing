@@ -22,6 +22,7 @@ export function Footer() {
             <li><Link className="text-ash transition-colors hover:text-cloud" to="/#trilhos">Status dos trilhos</Link></li>
             <li><Link className="text-ash transition-colors hover:text-cloud" to="/#perguntas">Perguntas frequentes</Link></li>
             <li><Link className="text-ash transition-colors hover:text-cloud" to="/#baixar">Baixar o app</Link></li>
+            <li><Link className="text-ash transition-colors hover:text-cloud" to="/suporte">Suporte</Link></li>
           </ul>
         </nav>
         <nav aria-label="Legal">

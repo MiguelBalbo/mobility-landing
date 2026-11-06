@@ -9,6 +9,7 @@ import NotFound from '@/pages/NotFound';
 // As páginas legais carregam o markdown e o react-markdown só quando abertas.
 const Termos = lazy(() => import('@/pages/Legal').then((m) => ({ default: m.Termos })));
 const Privacidade = lazy(() => import('@/pages/Legal').then((m) => ({ default: m.Privacidade })));
+const Suporte = lazy(() => import('@/pages/Suporte'));
 
 // Ao trocar de página, volta ao topo; com âncora (#recursos), rola até a seção.
 function RolagemPorRota() {
@@ -34,6 +35,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/termos" element={<Termos />} />
             <Route path="/privacidade" element={<Privacidade />} />
+            <Route path="/suporte" element={<Suporte />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

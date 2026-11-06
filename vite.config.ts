@@ -10,7 +10,7 @@ import { defineConfig, type Plugin } from 'vite';
 const BASE_PRODUCAO = process.env.BASE_PATH ?? '/mobility-landing/';
 
 // Rotas do React Router que precisam de um HTML próprio no Pages.
-const ROTAS = ['termos', 'privacidade'];
+const ROTAS = ['termos', 'privacidade', 'suporte'];
 
 // O Pages não tem rewrite de SPA: copia o index.html para cada rota (abre com status 200) e para o 404.html
 // (qualquer outro caminho cai na página de 404 do app). O .nojekyll evita que o Pages processe o dist.
