@@ -3,6 +3,8 @@ import { Link } from 'react-router';
 // Endereço "Incorporar" do Formulário Google de suporte (Enviar › <> › copiar o src do iframe, que termina em
 // "?embedded=true"). Vazio = a página mostra só o e-mail.
 const URL_FORMULARIO = 'https://docs.google.com/forms/d/e/1FAIpQLSeSPd7Lm2UGdyuCtWNoXkdFkdrKsxfxibDhzOr8FiqfxEDiAg/viewform?embedded=true';
+// O mesmo formulário fora da página (tela cheia), para quem estiver no celular.
+const URL_FORMULARIO_TELA_CHEIA = URL_FORMULARIO.replace('?embedded=true', '');
 // Formulário com envio de captura de tela: o Google exige login para anexar arquivos e não deixa incorporar.
 const URL_FORMULARIO_COM_PRINT = 'https://docs.google.com/forms/d/e/1FAIpQLSf6dRTxuyHVtmKe5bnnXh9w6nT_gCcPnwdvHaf1MRWkrn7aCg/viewform?usp=header';
 
@@ -52,6 +54,7 @@ export default function Suporte() {
             Dúvidas, problemas no app, sugestões ou pedidos sobre os seus dados: escreva para nós. Respondemos em até
             5 dias úteis (pedidos da LGPD, em até 15 dias).
           </p>
+          <p className="label-mono mt-6 text-fog">Mobility · desenvolvido por Miguel Balbo Victor</p>
         </div>
       </header>
 
@@ -77,10 +80,19 @@ export default function Suporte() {
                 </span>
                 <span aria-hidden className="text-signal">↗</span>
               </a>
+              <a
+                href={URL_FORMULARIO_TELA_CHEIA}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex h-12 items-center gap-2 rounded-full bg-signal px-6 font-semibold text-deep hover:bg-halo">
+                Abrir o formulário em tela cheia <span aria-hidden>↗</span>
+              </a>
+              {/* No celular o formulário fica mais alto (perguntas em várias linhas): altura maior para não sobrar
+                  rolagem dentro dele e o botão Enviar ficar à vista. */}
               <iframe
                 src={URL_FORMULARIO}
                 title="Formulário de suporte do Mobility"
-                className="mt-8 h-[1900px] w-full rounded-2xl border border-line bg-white"
+                className="mt-6 h-[2050px] w-full rounded-2xl border border-line bg-white md:h-[1900px]"
                 loading="lazy"
               >
                 Carregando…
