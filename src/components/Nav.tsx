@@ -8,6 +8,7 @@ const ITENS = [
   { rotulo: 'Trilhos', href: '/#trilhos' },
   { rotulo: 'Privacidade', href: '/#privacidade' },
   { rotulo: 'Perguntas', href: '/#perguntas' },
+  { rotulo: 'Suporte', href: '/suporte' },
 ];
 
 // Barra fixa em vidro fosco; ganha fundo e borda depois do primeiro scroll.
