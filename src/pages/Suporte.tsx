@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router';
 
 // Endereço "Incorporar" do Formulário Google de suporte (Enviar › <> › copiar o src do iframe, que termina em
@@ -42,6 +43,10 @@ const DUVIDAS: { p: string; r: string }[] = [
 ];
 
 export default function Suporte() {
+  useEffect(() => {
+    document.title = 'Suporte — Mobility';
+  }, []);
+
   return (
     <>
       <header className="relative overflow-hidden border-b border-line pb-16 pt-36 md:pb-20 md:pt-44">

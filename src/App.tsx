@@ -10,6 +10,7 @@ import NotFound from '@/pages/NotFound';
 const Termos = lazy(() => import('@/pages/Legal').then((m) => ({ default: m.Termos })));
 const Privacidade = lazy(() => import('@/pages/Legal').then((m) => ({ default: m.Privacidade })));
 const Suporte = lazy(() => import('@/pages/Suporte'));
+const Baixar = lazy(() => import('@/pages/Baixar'));
 
 // Ao trocar de página, volta ao topo; com âncora (#recursos), rola até a seção.
 function RolagemPorRota() {
@@ -36,6 +37,10 @@ export default function App() {
             <Route path="/termos" element={<Termos />} />
             <Route path="/privacidade" element={<Privacidade />} />
             <Route path="/suporte" element={<Suporte />} />
+            {/* Links de compartilhamento: detecta o aparelho ou vai direto à loja de cada plataforma */}
+            <Route path="/baixar" element={<Baixar key="auto" />} />
+            <Route path="/baixar/ios" element={<Baixar key="ios" plataforma="ios" />} />
+            <Route path="/baixar/android" element={<Baixar key="android" plataforma="android" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

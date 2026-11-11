@@ -1,9 +1,9 @@
 // Conteúdo estático da landing. As cores das linhas de trilhos são as mesmas de src/widgets/apresentacao.ts do app.
 
-// TODO: trocar pelos links das lojas quando o app for publicado. Enquanto não começam com http, os botões
-// mostram o aviso de "ainda não disponível" (lib/avisoLoja.ts).
+// Links das lojas. Enquanto um link não começa com http, o botão mostra o aviso de "ainda não disponível"
+// (lib/avisoLoja.ts). TODO: link do Google Play quando o app for publicado no Android.
 export const LINKS_LOJA = {
-  appStore: '#baixar',
+  appStore: 'https://apps.apple.com/br/app/mobility-%C3%B4nibus-em-tempo-real/id6826477789',
   googlePlay: '#baixar',
 };
 
